@@ -5,9 +5,7 @@ const totalResult = document.querySelector('.total-population');
 const averageResult = document.querySelector('.average-population');
 const population = [...spanArr];
 
-const totalArr = population.map((el) =>
-  parseInt(el.textContent.replaceAll(',', '')),
-);
+const totalArr = population.map((el) => +el.textContent.replaceAll(',', ''));
 const total = totalArr.reduce((sum, el) => sum + el, 0);
 
 totalResult.textContent = total.toLocaleString('en');

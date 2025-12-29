@@ -6,12 +6,12 @@ const avarageResult = document.querySelector('.average-population');
 const population = [...spanArr];
 
 const totalArr = population.map((el) =>
-  Number(el.textContent.replaceAll(',', '')),
+  parseInt(el.textContent.replaceAll(',', '')),
 );
 const total = totalArr.reduce((sum, el) => sum + el, 0);
 
-totalResult.textContent = total.toLocaleString();
+totalResult.textContent = total.toLocaleString('en');
 
-avarageResult.textContent = Math.round(
-  total / totalArr.length,
-).toLocaleString();
+avarageResult.textContent = Math.round(total / totalArr.length).toLocaleString(
+  'en',
+);

@@ -2,7 +2,7 @@
 
 const spanArr = document.querySelectorAll('.population');
 const totalResult = document.querySelector('.total-population');
-const avarageResult = document.querySelector('.average-population');
+const averageResult = document.querySelector('.average-population');
 const population = [...spanArr];
 
 const totalArr = population.map((el) =>
@@ -12,6 +12,6 @@ const total = totalArr.reduce((sum, el) => sum + el, 0);
 
 totalResult.textContent = total.toLocaleString('en');
 
-avarageResult.textContent = Math.round(total / totalArr.length).toLocaleString(
+averageResult.textContent = Math.round(total / totalArr.length).toLocaleString(
   'en',
 );
